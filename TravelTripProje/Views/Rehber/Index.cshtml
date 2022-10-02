@@ -1,0 +1,124 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Free Easy-Trip Website Template | Destinations :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+   
+
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>Mekan Önerileri</h3>
+                <img src="~/web/images/dest_banner.jpg" alt="" />
+            </div>
+            <div class="grids">
+                <div class="box1">
+                    <div class="padding">
+                    <h4>En Popüler 10 Blog</h4>
+                    @{ int i = 0;}
+                    @foreach (var x in Model)
+                    {
+                        <ul class="list list-pad">
+                            <li class="list-bg"><span>@{i++;}@i</span><a href="/Blog/BlogDetay/@x.ID">@x.Baslik</a></li>
+                        </ul>
+                    }
+                    <a href="/Blog/Index/" class="link1">Tüm Blogları Gör</a>
+                </div>
+
+                <div class="desti-middle">
+                    <h4>Plaj Tatilleri</h4>
+                    <div class="box-left">
+                        <div class="bot-img">
+                            <img src="~/web/images/pic6.jpg" alt="" />
+                        </div>
+                        <div class="bot-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="box-left">
+                        <div class="bot-img">
+                            <img src="~/web/images/pic4.jpg" alt="" />
+                        </div>
+                        <div class="bot-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="box-left">
+                        <div class="bot-img">
+                            <img src="~/web/images/pic5.jpg" alt="" />
+                        </div>
+                        <div class="bot-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="desti-right">
+                    <h4>Konaklama Önerileri</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratteryui</p>
+                    <div class="desti-text">
+                        <ul class="list1">
+                            <li><a href="#">adipiscing hotels</a></li>
+                            <li><a href="#"> tincidunt ut hotels</a></li>
+                            <li><a href="#">vulputate velit hotels</a></li>
+                            <li><a href="#">molestie hotels</a></li>
+                            <li><a href="#">luptatum hotels</a></li>
+                            <li><a href="#">claritatem hotels</a></li>
+                            <li><a href="#">decima hotels</a></li>
+                            <li><a href="#">decima hotels</a></li>
+                            <li><a href="#">Investigationes hotels</a></li>
+                            <li><a href="#">claritatem hotels</a></li>
+                            <li><a href="#">decima hotels</a></li>
+                            <li><a href="#">decima hotels</a></li>
+                            <li><a href="#">Investigationes hotels</a></li>
+                        </ul>
+                    </div>
+                    <div class="desti-text">
+                        <ul class="list1">
+                            <li><a href="#">claritatem hotels</a></li>
+                            <li><a href="#">decima hotels</a></li>
+                            <li><a href="#">decima hotels</a></li>
+                            <li><a href="#">Investigationes hotels</a></li>
+                            <li><a href="#">adipiscing hotels</a></li>
+                            <li><a href="#"> tincidunt ut hotels</a></li>
+                            <li><a href="#">vulputate velit hotels</a></li>
+                            <li><a href="#">molestie hotels</a></li>
+                            <li><a href="#">adipiscing hotels</a></li>
+                            <li><a href="#"> tincidunt ut hotels</a></li>
+                            <li><a href="#">vulputate velit hotels</a></li>
+                            <li><a href="#">molestie hotels</a></li>
+                            <li><a href="#">luptatum hotels</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
